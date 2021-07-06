@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_grid/responsive_grid.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class Flights extends StatelessWidget {
+class Accommodation extends StatelessWidget {
   UrlHandler urlHandler = UrlHandler();
 
   @override
@@ -11,7 +11,7 @@ class Flights extends StatelessWidget {
       Row(
         children: [
           Text(
-            "Flights Favourites",
+            "Rental and Accommodation",
             overflow: TextOverflow.visible,
             style: const TextStyle(
                 fontSize: 30, color: Color.fromARGB(255, 37, 74, 118)),
@@ -19,7 +19,7 @@ class Flights extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(left: 20, right: 10),
             child: Icon(
-              Icons.flight,
+              Icons.article_rounded,
               color: Color.fromARGB(255, 37, 74, 118),
             ), // icon is 48px widget.
           )
@@ -31,7 +31,7 @@ class Flights extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.only(top: 10, bottom: 10),
               child: Text(
-                "Favourite flight booking websites to book domestic and international flights",
+                "Favourite websites for finding Accommodation and Rents in Australia",
                 overflow: TextOverflow.visible,
                 style: const TextStyle(
                     fontSize: 18, color: Color.fromARGB(255, 37, 74, 118)),
@@ -43,31 +43,31 @@ class Flights extends StatelessWidget {
       ResponsiveGridRow(
         children: [
           buildResponsiveCardHyperlink(
-              "Webjet",
-              "Webjet an online travel agency in Australia and New Zealand",
-              "https://www.webjet.com.au/",
-              "assets/webjet.png",
+              "Flatmates",
+              "Australia's biggest share accommodation site",
+              "https://flatmates.com.au/",
+              "assets/flatmates.png",
               BoxFit.fitWidth
           ),
           buildResponsiveCardHyperlink(
-              "Flight Centre",
-              "Flight Centre Australia is Australia's largest retailer of travel",
-              "https://www.flightcentre.com.au/",
-              "assets/flightcentre.png",
-              BoxFit.fitWidth
-          ),
-          buildResponsiveCardHyperlink(
-              "Qantas",
-              "Qantas Airways is the largest airline in Australia with international and domestic flights",
-              "https://www.qantas.com/",
-              "assets/qantas.png",
+              "Rent.com.au",
+              "Find the perfect house, apartment, unit or granny flat for rent on Australia's #1 rental property website",
+              "https://www.rent.com.au/",
+              "assets/rent.png",
               BoxFit.fitHeight
           ),
           buildResponsiveCardHyperlink(
-              "Jetstar",
-              "Jetstar Airways Pty Ltd, operating as Jetstar, is an Australian low-cost airline headquartered in Melbourne",
-              "https://www.jetstar.com/",
-              "assets/jetstar.png",
+              "Domain.com.au",
+              "Search houses & apartments for Rent.",
+              "https://www.domain.com.au/",
+              "assets/domain.png",
+              BoxFit.fitWidth
+          ),
+          buildResponsiveCardHyperlink(
+              "Real Estate Property",
+              "realestate.com.au is Australia's No.1 property site for rent as well as property news",
+              "https://www.realestate.com.au/rent",
+              "assets/realestate.png",
               BoxFit.fitHeight
           ),
         ],
@@ -77,35 +77,35 @@ class Flights extends StatelessWidget {
 
   ResponsiveGridCol buildResponsiveCardHyperlink(String title, String body, String link, String img, BoxFit boxfit) {
     return ResponsiveGridCol(
-          xs: 20,
-          md: 3,
-          child: Container(
-            height: 200,
-            child: Card(
-              elevation: 5,
-              clipBehavior: Clip.antiAlias,
-              child: InkWell(
-                onTap: () {
-                  urlHandler.launchURL(link);
-                },
-                child: ListTile(
-                  contentPadding: EdgeInsets.only(left: 20, right: 10, top: 20),
-                  title: Text(title),
-                  subtitle: Text(body),
-                  trailing: Image.asset(
-                      img, fit: boxfit,
-                    width: 100, height: 100,
-                  ),
-                ),
+      xs: 20,
+      md: 3,
+      child: Container(
+        height: 200,
+        child: Card(
+          elevation: 5,
+          clipBehavior: Clip.antiAlias,
+          child: InkWell(
+            onTap: () {
+              urlHandler.launchURL(link);
+            },
+            child: ListTile(
+              contentPadding: EdgeInsets.only(left: 20, right: 10, top: 20),
+              title: Text(title),
+              subtitle: Text(body),
+              trailing: Image.asset(
+                img, fit: boxfit,
+                width: 100, height: 100,
               ),
             ),
           ),
-        );
+        ),
+      ),
+    );
   }
 }
 
 class UrlHandler {
-   launchURL(String url) async {
+  launchURL(String url) async {
     if (await canLaunch(url)) {
       await launch(url);
     } else {

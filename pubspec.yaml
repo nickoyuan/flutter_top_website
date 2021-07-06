@@ -46,22 +46,7 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-    - assets/baido.png
-    - assets/booking.png
-    - assets/plane.png
-    - assets/hotel.jpg
-    - assets/expedia.png
-    - assets/trivago.jpg
-    - assets/airbnb.png
-    - assets/webjet.png
-    - assets/flightcentre.png
-    - assets/qantas.png
-    - assets/jetstar.png
-    - assets/abc.jpg
-    - assets/nine_news.jpg
-    - assets/sbs.png
-    - assets/sky.png
-    - assets/news_background.jpg
+    - assets/
   fonts:
     - family: Open Sans
       fonts:

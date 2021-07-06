@@ -19,7 +19,7 @@ class News extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(left: 20, right: 10),
             child: Icon(
-              Icons.hotel,
+              Icons.article_rounded,
               color: Color.fromARGB(255, 37, 74, 118),
             ), // icon is 48px widget.
           )
@@ -54,7 +54,7 @@ class News extends StatelessWidget {
               "Nine News is the national news service of the Nine Network in Australia",
               "https://www.9news.com.au/",
               "assets/nine_news.jpg",
-              BoxFit.fitWidth
+              BoxFit.fitHeight
           ),
           buildResponsiveCardHyperlink(
               "SBS News",

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:searchlog/views/centered_view.dart';
 import 'package:searchlog/views/navigation_bar.dart';
 import 'package:searchlog/views/search_view.dart';
+import 'cards/accommodation.dart';
 import 'cards/flights.dart';
 import 'cards/news.dart';
 import 'cards/top_places.dart';
@@ -62,6 +63,17 @@ class HomeView extends StatelessWidget {
                       )
                   ),
                   child: CenteredView(child: News()),
+                ),
+              ),
+              Align(
+                child: Container(
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage("assets/accomidation.jpg"),
+                        fit: BoxFit.cover,
+                      )
+                  ),
+                  child: CenteredView(child: Accommodation()),
                 ),
               )
             ],
