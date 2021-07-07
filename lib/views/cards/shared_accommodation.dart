@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_grid/responsive_grid.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class Accommodation extends StatelessWidget {
+class SharedAccommodation extends StatelessWidget {
   UrlHandler urlHandler = UrlHandler();
 
   @override
@@ -11,7 +11,7 @@ class Accommodation extends StatelessWidget {
       Row(
         children: [
           Text(
-            "Private Rent in Australia",
+            "Shared Rent and Homestay Accommodation",
             overflow: TextOverflow.visible,
             style: const TextStyle(
                 fontSize: 30, color: Color.fromARGB(255, 37, 74, 118)),
@@ -31,7 +31,7 @@ class Accommodation extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.only(top: 10, bottom: 10),
               child: Text(
-                "Favourite websites for finding Private Accommodation and Rents in Australia",
+                "Favourite websites for finding Shared rent and Homestay in Australia",
                 overflow: TextOverflow.visible,
                 style: const TextStyle(
                     fontSize: 18, color: Color.fromARGB(255, 37, 74, 118)),
@@ -43,32 +43,32 @@ class Accommodation extends StatelessWidget {
       ResponsiveGridRow(
         children: [
           buildResponsiveCardHyperlink(
-              "Domain.com.au",
-              "Search houses & apartments for Rent.",
-              "https://www.domain.com.au/",
-              "assets/domain.png",
+              "Flatmates.com.au",
+              "Australia's biggest share accommodation site",
+              "https://flatmates.com.au/",
+              "assets/flatmates.png",
               BoxFit.fitWidth
           ),
           buildResponsiveCardHyperlink(
-              "Rent.com.au",
-              "Find the perfect house, apartment, unit or granny flat for rent on Australia's #1 rental property website",
-              "https://www.rent.com.au/",
-              "assets/rent.png",
+              "Homestay Rentals",
+              "By staying with an Australian host family, those looking for short and long term accommodation",
+              "https://www.homestay.com/australia",
+              "assets/homestay.jpg",
               BoxFit.fitHeight
           ),
           buildResponsiveCardHyperlink(
-              "Real Estate Property",
-              "realestate.com.au is Australia's No.1 property site for rent as well as property news",
-              "https://www.realestate.com.au/rent",
-              "assets/realestate.png",
+              "Homestay network Australia",
+              "You will receive help and protection with the host family, you will learn about Australian Culture and Custom",
+              "https://www.homestaynetwork.com.au/",
+              "assets/homestaynetwork.png",
               BoxFit.fitHeight
           ),
           buildResponsiveCardHyperlink(
-              "Homely",
-              "Find rental properties in Australia",
-              "https://www.homely.com.au/",
-              "assets/homely.jpg",
-              BoxFit.fitHeight
+              "Global Experience Homestay",
+              "We have a large pool of homestay families across Australia",
+              "https://www.globalexperience.com.au/",
+              "assets/globalexperience.png",
+              BoxFit.fitWidth
           ),
         ],
       ),

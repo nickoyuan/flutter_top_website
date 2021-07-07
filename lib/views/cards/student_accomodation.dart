@@ -11,7 +11,7 @@ class StudentAccommodation extends StatelessWidget {
       Row(
         children: [
           Text(
-            "Rental and Accommodation",
+            "Student Accommodation in Australia",
             overflow: TextOverflow.visible,
             style: const TextStyle(
                 fontSize: 30, color: Color.fromARGB(255, 37, 74, 118)),
@@ -19,7 +19,7 @@ class StudentAccommodation extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(left: 20, right: 10),
             child: Icon(
-              Icons.article_rounded,
+              Icons.house,
               color: Color.fromARGB(255, 37, 74, 118),
             ), // icon is 48px widget.
           )
@@ -31,7 +31,7 @@ class StudentAccommodation extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.only(top: 10, bottom: 10),
               child: Text(
-                "Favourite websites for finding Accommodation and Rents in Australia",
+                "Purpose-built student accommodation either on-campus or within walking distance of your school",
                 overflow: TextOverflow.visible,
                 style: const TextStyle(
                     fontSize: 18, color: Color.fromARGB(255, 37, 74, 118)),
@@ -43,32 +43,32 @@ class StudentAccommodation extends StatelessWidget {
       ResponsiveGridRow(
         children: [
           buildResponsiveCardHyperlink(
-              "Student Accommodation One",
-              "Room for rent, Student Accommodation and Homestay",
-              "https://www.studentaccommodationone.com/au",
-              "assets/student_one.png",
+              "Campus Living Villages",
+              "Campus Living Villages has a proud history of setting new standards for student living, learning and lifestyle experiences",
+              "https://campuslivingvillages.com/australia",
+              "assets/campus_living_villages.jpg",
               BoxFit.fitWidth
           ),
           buildResponsiveCardHyperlink(
-              "Rent.com.au",
-              "Find the perfect house, apartment, unit or granny flat for rent on Australia's #1 rental property website",
-              "https://www.rent.com.au/",
-              "assets/rent.png",
+              "Uni Lodge",
+              "Top Student Housing in Australia and New Zealand",
+              "https://www.unilodge.com.au/",
+              "assets/unilodge.png",
               BoxFit.fitWidth
           ),
           buildResponsiveCardHyperlink(
-              "Domain.com.au",
-              "Search houses & apartments for Rent.",
-              "https://www.domain.com.au/",
-              "assets/domain.png",
-              BoxFit.fitHeight
+              "Urbanest Australia",
+              "Urbanest Student Accommodation offers quality accommodation for students in Australia",
+              "https://urbanest.com.au/",
+              "assets/urbanest.png",
+              BoxFit.fitWidth
           ),
           buildResponsiveCardHyperlink(
-              "Real Estate Property",
-              "realestate.com.au is Australia's No.1 property site for rent as well as property news",
-              "https://www.realestate.com.au/rent",
-              "assets/realestate.png",
-              BoxFit.fitHeight
+              "Student.com",
+              "Book student housing with Student.com, the world's largest marketplace for international student housing.",
+              "https://www.student.com/",
+              "assets/student.png",
+              BoxFit.fitWidth
           ),
         ],
       ),

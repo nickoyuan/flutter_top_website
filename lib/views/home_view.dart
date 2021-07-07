@@ -5,6 +5,8 @@ import 'package:searchlog/views/search_view.dart';
 import 'cards/accommodation.dart';
 import 'cards/flights.dart';
 import 'cards/news.dart';
+import 'cards/shared_accommodation.dart';
+import 'cards/student_accomodation.dart';
 import 'cards/top_places.dart';
 
 class HomeView extends StatelessWidget {
@@ -74,6 +76,28 @@ class HomeView extends StatelessWidget {
                       )
                   ),
                   child: CenteredView(child: Accommodation()),
+                ),
+              ),
+              Align(
+                child: Container(
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage("assets/sharedrent.jpg"),
+                        fit: BoxFit.cover,
+                      )
+                  ),
+                  child: CenteredView(child: SharedAccommodation()),
+                ),
+              ),
+              Align(
+                child: Container(
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage("assets/student_accommodation.jpg"),
+                        fit: BoxFit.cover,
+                      )
+                  ),
+                  child: CenteredView(child: StudentAccommodation()),
                 ),
               )
             ],
