@@ -8,6 +8,7 @@ import 'cards/news.dart';
 import 'cards/shared_accommodation.dart';
 import 'cards/student_accomodation.dart';
 import 'cards/top_places.dart';
+import 'cards/travel.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -98,6 +99,17 @@ class HomeView extends StatelessWidget {
                       )
                   ),
                   child: CenteredView(child: StudentAccommodation()),
+                ),
+              ),
+              Align(
+                child: Container(
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage("assets/tours_background.jpg"),
+                        fit: BoxFit.cover,
+                      )
+                  ),
+                  child: CenteredView(child: Travel()),
                 ),
               )
             ],

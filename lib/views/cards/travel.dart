@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_grid/responsive_grid.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class SharedAccommodation extends StatelessWidget {
+class Travel extends StatelessWidget {
   UrlHandler urlHandler = UrlHandler();
 
   @override
@@ -12,7 +12,7 @@ class SharedAccommodation extends StatelessWidget {
         children: [
           Expanded(
             child: Text(
-              "Shared Rent and Homestay Accommodation",
+              "Tours and Travel in Australia",
               overflow: TextOverflow.visible,
               style: const TextStyle(
                   fontSize: 30, color: Color.fromARGB(255, 37, 74, 118)),
@@ -21,7 +21,7 @@ class SharedAccommodation extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(left: 20, right: 10),
             child: Icon(
-              Icons.house,
+              Icons.hotel,
               color: Color.fromARGB(255, 37, 74, 118),
             ), // icon is 48px widget.
           )
@@ -33,7 +33,7 @@ class SharedAccommodation extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.only(top: 10, bottom: 10),
               child: Text(
-                "Favourite websites for finding Shared rent and Homestay in Australia",
+                "Top Australia Travel Packages and Tours",
                 overflow: TextOverflow.visible,
                 style: const TextStyle(
                     fontSize: 18, color: Color.fromARGB(255, 37, 74, 118)),
@@ -45,32 +45,32 @@ class SharedAccommodation extends StatelessWidget {
       ResponsiveGridRow(
         children: [
           buildResponsiveCardHyperlink(
-              "Flatmates.com.au",
-              "Australia's biggest share accommodation site",
-              "https://flatmates.com.au/",
-              "assets/flatmates.png",
+              "Contiki",
+              "Travel Together, Travel Contiki",
+              "https://www.contiki.com/",
+              "assets/contiki.png",
               BoxFit.fitWidth
           ),
           buildResponsiveCardHyperlink(
-              "Homestay Rentals",
-              "By staying with an Australian host family, those looking for short and long term accommodation",
-              "https://www.homestay.com/australia",
-              "assets/homestay.jpg",
+              "Airbnb Adventures",
+              "Hosted journeys to extraordinary places- all you have to do is show up",
+              "https://www.airbnb.com.au/d/adventures",
+              "assets/airbnb.png",
               BoxFit.fitHeight
           ),
           buildResponsiveCardHyperlink(
-              "Homestay network Australia",
-              "You will receive help and protection with the host family, you will learn about Australian Culture and Custom",
-              "https://www.homestaynetwork.com.au/",
-              "assets/homestaynetwork.png",
+              "Evergreen Tours",
+              "Trivago is a Dutch company specializing in internet-related services and products in the hotel.",
+              "https://www.evergreentours.com.au/tours",
+              "assets/evergreen.png",
               BoxFit.fitHeight
           ),
           buildResponsiveCardHyperlink(
-              "Global Experience Homestay",
-              "We have a large pool of homestay families across Australia",
-              "https://www.globalexperience.com.au/",
-              "assets/globalexperience.png",
-              BoxFit.fitWidth
+              "Sightseeing Tours",
+              "Sightseeing Tours offer quality tours across Australia at the best possible price.",
+              "https://sightseeingtoursaustralia.com.au/",
+              "assets/sightseeing_tours.jpg",
+              BoxFit.fitHeight
           ),
         ],
       ),
