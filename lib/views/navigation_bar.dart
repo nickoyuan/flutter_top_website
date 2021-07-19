@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:searchlog/views/centered_view.dart';
 
 class NavigationBar extends StatelessWidget {
   const NavigationBar({Key? key}) : super(key: key);
@@ -57,29 +56,3 @@ class NavBarItem extends StatelessWidget {
     );
   }
 }
-
-/*
-    return Text(
-      title,
-      style: TextStyle(
-        color: Colors.white,
-          fontSize: 18
-      ),
-    );
- */
-/*
- GestureDetector(
-      onTap: () {
-        navKey.currentState.pushNamed(routeName);
-        onHighlight(routeName);
-      },
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 50.0),
-        child: InteractiveNavItem(
-          text: title,
-          routeName: routeName,
-          selected: selected,
-        ),
-      ),
-    );
- */

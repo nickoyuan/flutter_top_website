@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_grid/responsive_grid.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class GridLayout extends StatelessWidget {
+class GridNews extends StatelessWidget {
   UrlHandler urlHandler = UrlHandler();
 
   @override
@@ -11,26 +11,22 @@ class GridLayout extends StatelessWidget {
       ResponsiveGridRow(
         children: [
           buildResponsiveCardHyperlink(
-              "Webjet",
-              "Webjet an online travel agency in Australia and New Zealand",
+              "News",
               "https://www.webjet.com.au/",
               "assets/plane.png",
               BoxFit.contain),
           buildResponsiveCardHyperlink(
-              "Flight Centre",
-              "Flight Centre Australia is Australia's largest retailer of travel",
+              "Videos",
               "https://www.flightcentre.com.au/",
               "assets/flightcentre.png",
               BoxFit.fitWidth),
           buildResponsiveCardHyperlink(
-              "Qantas",
-              "Qantas Airways is the largest airline in Australia with international and domestic flights",
+              "Games",
               "https://www.qantas.com/",
               "assets/qantas.png",
               BoxFit.fitHeight),
           buildResponsiveCardHyperlink(
-              "Jetstar",
-              "Jetstar Airways Pty Ltd, operating as Jetstar, is an Australian low-cost airline headquartered in Melbourne",
+              "Tour",
               "https://www.jetstar.com/",
               "assets/jetstar.png",
               BoxFit.fitHeight),
@@ -40,9 +36,9 @@ class GridLayout extends StatelessWidget {
   }
 
   ResponsiveGridCol buildResponsiveCardHyperlink(
-      String title, String body, String link, String img, BoxFit boxfit) {
+      String title, String link, String img, BoxFit boxfit) {
     return ResponsiveGridCol(
-      xs: 20,
+      xs: 5,
       md: 3,
       child: Container(
         height: 250,
@@ -62,11 +58,11 @@ class GridLayout extends StatelessWidget {
                 Expanded(
                     child: new Container(
                         decoration: new BoxDecoration(
-                  image: new DecorationImage(
-                    image: new AssetImage('assets/plane.png'),
-                    fit: BoxFit.cover,
-                  ),
-                ))),
+                          image: new DecorationImage(
+                            image: new AssetImage('assets/plane.png'),
+                            fit: BoxFit.cover,
+                          ),
+                        ))),
               ],
             ),
           ),
