@@ -9,8 +9,11 @@ class GridLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
+      shrinkWrap: true,
+      scrollDirection: Axis.vertical,
+      physics: ScrollPhysics(),
       gridDelegate:
-          SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4),
+          SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
       itemBuilder: (_, index) => buildResponsiveCardHyperlink(
           choices[index].title,
           "www.google.com.au",
@@ -20,38 +23,55 @@ class GridLayout extends StatelessWidget {
     );
   }
 
-  ResponsiveGridCol buildResponsiveCardHyperlink(
+  Column buildResponsiveCardHyperlink(
       String title, String link, String img, BoxFit boxfit) {
-    return ResponsiveGridCol(
-      xs: 6,
-      md: 3,
-      child: Card(
-        elevation: 5,
-        clipBehavior: Clip.antiAlias,
-        child: InkWell(
-          onTap: () {
-            urlHandler.launchURL(link);
-          },
-          child: Column(
-            children: [
-              ListTile(
-                contentPadding: EdgeInsets.only(left: 20, right: 10),
-                title: Text(
-                  title,
-                  style: TextStyle(color: Colors.black, fontSize: 12),
+    return Column(children: [
+      ResponsiveGridCol(
+        xs: 4,
+        md: 1,
+        child: Card(
+          elevation: 5,
+          clipBehavior: Clip.antiAlias,
+          child: InkWell(
+            onTap: () {
+              urlHandler.launchURL(link);
+            },
+            child: Column(
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(10.0),
+                  alignment: Alignment.centerLeft,
+                  color: Colors.blue,
+                  child: FittedBox(
+                      fit: BoxFit.fill,
+                      child: Text(
+                        title,
+                        maxLines: 2,
+                        overflow: TextOverflow.visible,
+                        style: TextStyle(
+                          fontFamily: "OpenSans ExtraBold",
+                          fontWeight: FontWeight.w500,
+                          color: Colors.black,
+                          fontSize: 21
+                        ),
+                      ),
+                    ),
                 ),
-              ),
-              Container(
-                  decoration: new BoxDecoration(
-                image: new DecorationImage(
-                  image: new AssetImage('assets/plane.png'),
-                  fit: BoxFit.fill,
+                Expanded(
+                  child: Container(
+                      decoration: new BoxDecoration(
+                        image: new DecorationImage(
+                          image: new AssetImage('assets/plane.png'),
+                          fit: BoxFit.fill,
+                        ),
+                      )),
                 ),
-              )),
-            ],
+              ],
+            ),
           ),
         ),
       ),
+    ],
     );
   }
 }
