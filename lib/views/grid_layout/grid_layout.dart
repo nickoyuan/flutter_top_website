@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_grid/responsive_grid.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../grid_list.dart';
+import '../open_container_wrapper.dart';
 
 class GridLayout extends StatelessWidget {
   UrlHandler urlHandler = UrlHandler();
@@ -58,13 +59,17 @@ class GridLayout extends StatelessWidget {
                     ),
                 ),
                 Expanded(
-                  child: Container(
-                      decoration: new BoxDecoration(
-                        image: new DecorationImage(
-                          image: new AssetImage('assets/plane.png'),
-                          fit: BoxFit.fill,
-                        ),
-                      )),
+                  child: OpenContainerWrapper(
+                    closedBuilder: (BuildContext context, void Function() action) {
+                      return Container(
+                          decoration: new BoxDecoration(
+                            image: new DecorationImage(
+                              image: new AssetImage('assets/plane.png'),
+                              fit: BoxFit.fill,
+                            ),
+                          ));
+                    }, title: title,
+                  )
                 ),
               ],
             ),
