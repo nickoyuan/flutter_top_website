@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_grid/responsive_grid.dart';
 import 'package:url_launcher/url_launcher.dart';
-import '../grid_list.dart';
+import 'grid_list.dart';
 import '../open_container_wrapper.dart';
 
 class GridLayout extends StatelessWidget {
@@ -18,7 +18,7 @@ class GridLayout extends StatelessWidget {
       itemBuilder: (_, index) => buildResponsiveCardHyperlink(
           choices[index].title,
           "www.google.com.au",
-          "assets/abc.jpg",
+          choices[index].img,
           BoxFit.contain),
       itemCount: choices.length,
     );
@@ -39,33 +39,39 @@ class GridLayout extends StatelessWidget {
             },
             child: Column(
               children: [
-                Container(
-                  padding: const EdgeInsets.all(10.0),
-                  alignment: Alignment.centerLeft,
-                  color: Colors.blue,
-                  child: FittedBox(
-                      fit: BoxFit.fill,
-                      child: Text(
-                        title,
-                        maxLines: 2,
-                        overflow: TextOverflow.visible,
-                        style: TextStyle(
-                          fontFamily: "OpenSans ExtraBold",
-                          fontWeight: FontWeight.w500,
-                          color: Colors.black,
-                          fontSize: 21
+                Flexible(
+                  flex: 1,
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 10),
+                    child: Container(
+                      color: Color.fromARGB(255,249,249,247),
+                      alignment: Alignment.centerLeft,
+                      child: FittedBox(
+                          fit: BoxFit.contain,
+                          child: Text(
+                            title,
+                            maxLines: 2,
+                            overflow: TextOverflow.visible,
+                            style: TextStyle(
+                              fontFamily: "Merriweather-Regular",
+                              fontWeight: FontWeight.w600,
+                              color: Colors.grey[850],
+                              fontSize: 18
+                            ),
+                          ),
                         ),
-                      ),
                     ),
+                  ),
                 ),
-                Expanded(
+                Flexible(
+                  flex: 4,
                   child: OpenContainerWrapper(
                     closedBuilder: (BuildContext context, void Function() action) {
                       return Container(
                           decoration: new BoxDecoration(
                             image: new DecorationImage(
-                              image: new AssetImage('assets/plane.png'),
-                              fit: BoxFit.fill,
+                              image: new AssetImage(img),
+                              fit: BoxFit.cover,
                             ),
                           ));
                     }, title: title,

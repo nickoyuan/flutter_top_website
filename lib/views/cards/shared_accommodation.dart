@@ -10,13 +10,11 @@ class SharedAccommodation extends StatelessWidget {
     return Column(mainAxisSize: MainAxisSize.max, children: [
       Row(
         children: [
-          Expanded(
-            child: Text(
-              "Shared Rent and Homestay Accommodation",
-              overflow: TextOverflow.visible,
-              style: const TextStyle(
-                  fontSize: 30, color: Color.fromARGB(255, 37, 74, 118)),
-            ),
+          Text(
+            "Shared Rent and Homestay Accommodation",
+            overflow: TextOverflow.visible,
+            style: const TextStyle(
+                fontSize: 30, color: Color.fromARGB(255, 37, 74, 118)),
           ),
           Padding(
             padding: EdgeInsets.only(left: 20, right: 10),

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_grid/responsive_grid.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class TopPlaces extends StatelessWidget {
+class Hotel extends StatelessWidget {
   UrlHandler urlHandler = UrlHandler();
 
   @override
