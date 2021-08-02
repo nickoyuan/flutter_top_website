@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:searchlog/views/centered_view.dart';
 import 'package:searchlog/views/grid_layout/grid_layout.dart';
-import 'package:searchlog/views/navigation_bar.dart';
+import 'navigation_tab_bar.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -13,7 +13,7 @@ class HomeView extends StatelessWidget {
         body: SingleChildScrollView(
             child: Column(
           children: [
-            NavigationBar(),
+            NavigationTabBarView(),
             CenteredView(child: GridLayout()),
             SizedBox(height: 100,)
           ],
