@@ -13,9 +13,10 @@ class HomeView extends StatelessWidget {
         body: SingleChildScrollView(
             child: Column(
           children: [
-            NavigationTabBarView(),
+            CenteredView(child: NavigationTabBarView()),
             CenteredView(child: GridLayout()),
-            SizedBox(height: 100,)
+            SizedBox(height: 100,),
+            //FooterView()
           ],
         )));
   }

@@ -20,14 +20,14 @@ with SingleTickerProviderStateMixin{
       tab: CustomTab(title: 'Home'),
       content: HomeView(),
     ),
-    ContentView(
-      tab: CustomTab(title: 'About'),
-      content: HomeView(),
-    ),
-    ContentView(
-      tab: CustomTab(title: 'Projects'),
-      content: HomeView(),
-    )
+    // ContentView(
+    //   tab: CustomTab(title: 'About'),
+    //   content: HomeView(),
+    // ),
+    // ContentView(
+    //   tab: CustomTab(title: 'Support Us'),
+    //   content: HomeView(),
+    // )
   ];
   late TabController tabController;
 
@@ -41,20 +41,41 @@ with SingleTickerProviderStateMixin{
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     double  screenHeight = MediaQuery.of(context).size.height;
-
-    return Container(
-      color: Color.fromARGB(255, 28, 40, 52),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          Container(
-            height: screenHeight * 0.05,
-            child: CustomTabBar(
-                controller: tabController,
-                tabs: contentViews.map((e) => e.tab).toList()),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Column(children: [
+          Text(
+            "Top Websites",
+            overflow: TextOverflow.visible,
+            style: const TextStyle(
+                fontSize: 25, color: Colors.white
+            ),
           ),
-        ],
-      ),
+          Text(
+            "Click and Find",
+            overflow: TextOverflow.visible,
+            style: const TextStyle(
+                fontFamily: "Satisfy",
+                color: Colors.white,
+                fontSize: 25
+            ),
+          )
+        ],),
+        Container(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Container(
+                height: screenHeight * 0.05,
+                child: CustomTabBar(
+                    controller: tabController,
+                    tabs: contentViews.map((e) => e.tab).toList()),
+              ),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }
