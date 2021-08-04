@@ -7,72 +7,74 @@ class Manga extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(mainAxisSize: MainAxisSize.max, children: [
-      Row(
-        children: [
-          Text(
-            "Online Manga",
-            overflow: TextOverflow.visible,
-            style: const TextStyle(
-                fontSize: 30, color: Color.fromARGB(255, 37, 74, 118)),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 20, right: 10),
-            child: Icon(
-              Icons.flight,
-              color: Color.fromARGB(255, 37, 74, 118),
-            ), // icon is 48px widget.
-          )
-        ],
-      ),
-      Row(
-        children: [
-          Expanded(
-            child: Padding(
-              padding: EdgeInsets.only(top: 10, bottom: 10),
-              child: Text(
-                "Websites for free online manga",
-                overflow: TextOverflow.visible,
-                style: const TextStyle(
-                    fontSize: 18, color: Color.fromARGB(255, 37, 74, 118)),
+    return SingleChildScrollView(
+      child: Column(mainAxisSize: MainAxisSize.max, children: [
+        Row(
+          children: [
+            Text(
+              "Online Manga",
+              overflow: TextOverflow.visible,
+              style: const TextStyle(
+                  fontSize: 30, color: Color.fromARGB(255, 37, 74, 118)),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 20, right: 10),
+              child: Icon(
+                Icons.flight,
+                color: Color.fromARGB(255, 37, 74, 118),
+              ), // icon is 48px widget.
+            )
+          ],
+        ),
+        Row(
+          children: [
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.only(top: 10, bottom: 10),
+                child: Text(
+                  "Websites for free online manga",
+                  overflow: TextOverflow.visible,
+                  style: const TextStyle(
+                      fontSize: 18, color: Color.fromARGB(255, 37, 74, 118)),
+                ),
               ),
             ),
-          ),
-        ],
-      ),
-      ResponsiveGridRow(
-        children: [
-          buildResponsiveCardHyperlink(
-              "Crunchy Roll",
-              "Read your favorite Japanese manga online on Crunchyroll",
-              "https://www.crunchyroll.com/comics/manga",
-              "assets/crunchyroll.png",
-              BoxFit.fitHeight
-          ),
-          buildResponsiveCardHyperlink(
-              "Manganato",
-              "Read manga online free at MangaNato",
-              "https://manganato.com//",
-              "assets/manganato.png",
-              BoxFit.fitHeight
-          ),
-          buildResponsiveCardHyperlink(
-              "MangaOwl",
-              "Read english manga online free with a huge collections at Manga Owl",
-              "https://mangaowl.net/",
-              "assets/mangaowl.jpeg",
-              BoxFit.fitHeight
-          ),
-          buildResponsiveCardHyperlink(
-              "Mangakakalot",
-              "Read manga online free at Mangakakalot",
-              "https://mangakakalot.com/",
-              "assets/mangakakalot.jpeg",
-              BoxFit.fitHeight
-          )
-        ],
-      ),
-    ]);
+          ],
+        ),
+        ResponsiveGridRow(
+          children: [
+            buildResponsiveCardHyperlink(
+                "Crunchy Roll",
+                "Read your favorite Japanese manga online on Crunchyroll",
+                "https://www.crunchyroll.com/comics/manga",
+                "assets/crunchyroll.png",
+                BoxFit.fitHeight
+            ),
+            buildResponsiveCardHyperlink(
+                "Manganato",
+                "Read manga online free at MangaNato",
+                "https://manganato.com//",
+                "assets/manganato.png",
+                BoxFit.fitHeight
+            ),
+            buildResponsiveCardHyperlink(
+                "MangaOwl",
+                "Read english manga online free with a huge collections at Manga Owl",
+                "https://mangaowl.net/",
+                "assets/mangaowl.jpeg",
+                BoxFit.fitHeight
+            ),
+            buildResponsiveCardHyperlink(
+                "Mangakakalot",
+                "Read manga online free at Mangakakalot",
+                "https://mangakakalot.com/",
+                "assets/mangakakalot.jpeg",
+                BoxFit.fitHeight
+            )
+          ],
+        ),
+      ]),
+    );
   }
 
   ResponsiveGridCol buildResponsiveCardHyperlink(String title, String body, String link, String img, BoxFit boxfit) {

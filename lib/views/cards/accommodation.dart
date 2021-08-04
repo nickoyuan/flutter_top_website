@@ -7,72 +7,74 @@ class Accommodation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(mainAxisSize: MainAxisSize.max, children: [
-      Row(
-        children: [
-          Text(
-            "Private Rent in Australia",
-            overflow: TextOverflow.visible,
-            style: const TextStyle(
-                fontSize: 30, color: Color.fromARGB(255, 37, 74, 118)),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 20, right: 10),
-            child: Icon(
-              Icons.house,
-              color: Color.fromARGB(255, 37, 74, 118),
-            ), // icon is 48px widget.
-          )
-        ],
-      ),
-      Row(
-        children: [
-          Expanded(
-            child: Padding(
-              padding: EdgeInsets.only(top: 10, bottom: 10),
-              child: Text(
-                "Favourite websites for finding Private Accommodation and Rents in Australia",
-                overflow: TextOverflow.visible,
-                style: const TextStyle(
-                    fontSize: 18, color: Color.fromARGB(255, 37, 74, 118)),
+    return SingleChildScrollView(
+      child: Column(mainAxisSize: MainAxisSize.max, children: [
+        Row(
+          children: [
+            Text(
+              "Private Rent in Australia",
+              overflow: TextOverflow.visible,
+              style: const TextStyle(
+                  fontSize: 30, color: Color.fromARGB(255, 37, 74, 118)),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 20, right: 10),
+              child: Icon(
+                Icons.house,
+                color: Color.fromARGB(255, 37, 74, 118),
+              ), // icon is 48px widget.
+            )
+          ],
+        ),
+        Row(
+          children: [
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.only(top: 10, bottom: 10),
+                child: Text(
+                  "Favourite websites for finding Private Accommodation and Rents in Australia",
+                  overflow: TextOverflow.visible,
+                  style: const TextStyle(
+                      fontSize: 18, color: Color.fromARGB(255, 37, 74, 118)),
+                ),
               ),
             ),
-          ),
-        ],
-      ),
-      ResponsiveGridRow(
-        children: [
-          buildResponsiveCardHyperlink(
-              "Domain.com.au",
-              "Search houses & apartments for Rent.",
-              "https://www.domain.com.au/",
-              "assets/domain.png",
-              BoxFit.fitWidth
-          ),
-          buildResponsiveCardHyperlink(
-              "Rent.com.au",
-              "Find the perfect house, apartment, unit or granny flat for rent on Australia's #1 rental property website",
-              "https://www.rent.com.au/",
-              "assets/rent.png",
-              BoxFit.fitHeight
-          ),
-          buildResponsiveCardHyperlink(
-              "Real Estate Property",
-              "realestate.com.au is Australia's No.1 property site for rent as well as property news",
-              "https://www.realestate.com.au/rent",
-              "assets/realestate.png",
-              BoxFit.fitHeight
-          ),
-          buildResponsiveCardHyperlink(
-              "Homely",
-              "Find rental properties in Australia",
-              "https://www.homely.com.au/",
-              "assets/homely.jpg",
-              BoxFit.fitHeight
-          ),
-        ],
-      ),
-    ]);
+          ],
+        ),
+        ResponsiveGridRow(
+          children: [
+            buildResponsiveCardHyperlink(
+                "Domain.com.au",
+                "Search houses & apartments for Rent.",
+                "https://www.domain.com.au/",
+                "assets/domain.png",
+                BoxFit.fitWidth
+            ),
+            buildResponsiveCardHyperlink(
+                "Rent.com.au",
+                "Find the perfect house, apartment, unit or granny flat for rent on Australia's #1 rental property website",
+                "https://www.rent.com.au/",
+                "assets/rent.png",
+                BoxFit.fitHeight
+            ),
+            buildResponsiveCardHyperlink(
+                "Real Estate Property",
+                "realestate.com.au is Australia's No.1 property site for rent as well as property news",
+                "https://www.realestate.com.au/rent",
+                "assets/realestate.png",
+                BoxFit.fitHeight
+            ),
+            buildResponsiveCardHyperlink(
+                "Homely",
+                "Find rental properties in Australia",
+                "https://www.homely.com.au/",
+                "assets/homely.jpg",
+                BoxFit.fitHeight
+            ),
+          ],
+        ),
+      ]),
+    );
   }
 
   ResponsiveGridCol buildResponsiveCardHyperlink(String title, String body, String link, String img, BoxFit boxfit) {

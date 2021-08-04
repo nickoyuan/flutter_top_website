@@ -7,72 +7,74 @@ class Car extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(mainAxisSize: MainAxisSize.max, children: [
-      Row(
-        children: [
-          Text(
-            "Online Car Sales",
-            overflow: TextOverflow.visible,
-            style: const TextStyle(
-                fontSize: 30, color: Color.fromARGB(255, 37, 74, 118)),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 20, right: 10),
-            child: Icon(
-              Icons.flight,
-              color: Color.fromARGB(255, 37, 74, 118),
-            ), // icon is 48px widget.
-          )
-        ],
-      ),
-      Row(
-        children: [
-          Expanded(
-            child: Padding(
-              padding: EdgeInsets.only(top: 10, bottom: 10),
-              child: Text(
-                "Websites for car sales",
-                overflow: TextOverflow.visible,
-                style: const TextStyle(
-                    fontSize: 18, color: Color.fromARGB(255, 37, 74, 118)),
+    return SingleChildScrollView(
+      child: Column(mainAxisSize: MainAxisSize.max, children: [
+        Row(
+          children: [
+            Text(
+              "Online Car Sales",
+              overflow: TextOverflow.visible,
+              style: const TextStyle(
+                  fontSize: 30, color: Color.fromARGB(255, 37, 74, 118)),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 20, right: 10),
+              child: Icon(
+                Icons.flight,
+                color: Color.fromARGB(255, 37, 74, 118),
+              ), // icon is 48px widget.
+            )
+          ],
+        ),
+        Row(
+          children: [
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.only(top: 10, bottom: 10),
+                child: Text(
+                  "Websites for car sales",
+                  overflow: TextOverflow.visible,
+                  style: const TextStyle(
+                      fontSize: 18, color: Color.fromARGB(255, 37, 74, 118)),
+                ),
               ),
             ),
-          ),
-        ],
-      ),
-      ResponsiveGridRow(
-        children: [
-          buildResponsiveCardHyperlink(
-              "Car Sales",
-              "Search thousands of new and used cars for sale or sell on carsales today!",
-              "https://www.carsales.com.au/",
-              "assets/carsales.jpeg",
-              BoxFit.fitHeight
-          ),
-          buildResponsiveCardHyperlink(
-              "Cars Guide",
-              "Huge range of new & used vehicles on carsguide",
-              "https://www.carsguide.com.au/",
-              "assets/carsguide.jpeg",
-              BoxFit.fitHeight
-          ),
-          buildResponsiveCardHyperlink(
-              "Drive",
-              "Australia's most trusted source for buying used, new and nearly-new (demo) cars. ",
-              "https://www.drive.com.au/cars-for-sale/",
-              "assets/drive.png",
-              BoxFit.fitHeight
-          ),
-          buildResponsiveCardHyperlink(
-              "Auto Trader",
-              "Find new and used cars for sale on Autotrader.",
-              "https://www.autotrader.com.au/for-sale",
-              "assets/autotrader.png",
-              BoxFit.fitHeight
-          ),
-        ],
-      ),
-    ]);
+          ],
+        ),
+        ResponsiveGridRow(
+          children: [
+            buildResponsiveCardHyperlink(
+                "Car Sales",
+                "Search thousands of new and used cars for sale or sell on carsales today!",
+                "https://www.carsales.com.au/",
+                "assets/carsales.jpeg",
+                BoxFit.fitHeight
+            ),
+            buildResponsiveCardHyperlink(
+                "Cars Guide",
+                "Huge range of new & used vehicles on carsguide",
+                "https://www.carsguide.com.au/",
+                "assets/carsguide.jpeg",
+                BoxFit.fitHeight
+            ),
+            buildResponsiveCardHyperlink(
+                "Drive",
+                "Australia's most trusted source for buying used, new and nearly-new (demo) cars. ",
+                "https://www.drive.com.au/cars-for-sale/",
+                "assets/drive.png",
+                BoxFit.fitHeight
+            ),
+            buildResponsiveCardHyperlink(
+                "Auto Trader",
+                "Find new and used cars for sale on Autotrader.",
+                "https://www.autotrader.com.au/for-sale",
+                "assets/autotrader.png",
+                BoxFit.fitHeight
+            ),
+          ],
+        ),
+      ]),
+    );
   }
 
   ResponsiveGridCol buildResponsiveCardHyperlink(String title, String body, String link, String img, BoxFit boxfit) {

@@ -7,72 +7,74 @@ class Travel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(mainAxisSize: MainAxisSize.max, children: [
-      Row(
-        children: [
-          Text(
-            "Tours and Travel in Australia",
-            overflow: TextOverflow.visible,
-            style: const TextStyle(
-                fontSize: 30, color: Color.fromARGB(255, 37, 74, 118)),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 20, right: 10),
-            child: Icon(
-              Icons.hotel,
-              color: Color.fromARGB(255, 37, 74, 118),
-            ), // icon is 48px widget.
-          )
-        ],
-      ),
-      Row(
-        children: [
-          Expanded(
-            child: Padding(
-              padding: EdgeInsets.only(top: 10, bottom: 10),
-              child: Text(
-                "Top Australia Travel Packages and Tours",
-                overflow: TextOverflow.visible,
-                style: const TextStyle(
-                    fontSize: 18, color: Color.fromARGB(255, 37, 74, 118)),
+    return SingleChildScrollView(
+      child: Column(mainAxisSize: MainAxisSize.max, children: [
+        Row(
+          children: [
+            Text(
+              "Tours and Travel in Australia",
+              overflow: TextOverflow.visible,
+              style: const TextStyle(
+                  fontSize: 30, color: Color.fromARGB(255, 37, 74, 118)),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 20, right: 10),
+              child: Icon(
+                Icons.hotel,
+                color: Color.fromARGB(255, 37, 74, 118),
+              ), // icon is 48px widget.
+            )
+          ],
+        ),
+        Row(
+          children: [
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.only(top: 10, bottom: 10),
+                child: Text(
+                  "Top Australia Travel Packages and Tours",
+                  overflow: TextOverflow.visible,
+                  style: const TextStyle(
+                      fontSize: 18, color: Color.fromARGB(255, 37, 74, 118)),
+                ),
               ),
             ),
-          ),
-        ],
-      ),
-      ResponsiveGridRow(
-        children: [
-          buildResponsiveCardHyperlink(
-              "Contiki",
-              "Travel Together, Travel Contiki",
-              "https://www.contiki.com/",
-              "assets/contiki.png",
-              BoxFit.fitWidth
-          ),
-          buildResponsiveCardHyperlink(
-              "Airbnb Adventures",
-              "Hosted journeys to extraordinary places- all you have to do is show up",
-              "https://www.airbnb.com.au/d/adventures",
-              "assets/airbnb.png",
-              BoxFit.fitHeight
-          ),
-          buildResponsiveCardHyperlink(
-              "Evergreen Tours",
-              "Trivago is a Dutch company specializing in internet-related services and products in the hotel.",
-              "https://www.evergreentours.com.au/tours",
-              "assets/evergreen.png",
-              BoxFit.fitHeight
-          ),
-          buildResponsiveCardHyperlink(
-              "Sightseeing Tours",
-              "Sightseeing Tours offer quality tours across Australia at the best possible price.",
-              "https://sightseeingtoursaustralia.com.au/",
-              "assets/sightseeing_tours.jpg",
-              BoxFit.fitHeight
-          ),
-        ],
-      ),
-    ]);
+          ],
+        ),
+        ResponsiveGridRow(
+          children: [
+            buildResponsiveCardHyperlink(
+                "Contiki",
+                "Travel Together, Travel Contiki",
+                "https://www.contiki.com/",
+                "assets/contiki.png",
+                BoxFit.fitWidth
+            ),
+            buildResponsiveCardHyperlink(
+                "Airbnb Adventures",
+                "Hosted journeys to extraordinary places- all you have to do is show up",
+                "https://www.airbnb.com.au/d/adventures",
+                "assets/airbnb.png",
+                BoxFit.fitHeight
+            ),
+            buildResponsiveCardHyperlink(
+                "Evergreen Tours",
+                "Trivago is a Dutch company specializing in internet-related services and products in the hotel.",
+                "https://www.evergreentours.com.au/tours",
+                "assets/evergreen.png",
+                BoxFit.fitHeight
+            ),
+            buildResponsiveCardHyperlink(
+                "Sightseeing Tours",
+                "Sightseeing Tours offer quality tours across Australia at the best possible price.",
+                "https://sightseeingtoursaustralia.com.au/",
+                "assets/sightseeing_tours.jpg",
+                BoxFit.fitHeight
+            ),
+          ],
+        ),
+      ]),
+    );
   }
 
   ResponsiveGridCol buildResponsiveCardHyperlink(String title, String body, String link, String img, BoxFit boxfit) {

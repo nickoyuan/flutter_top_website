@@ -7,58 +7,60 @@ class CovidTest extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(mainAxisSize: MainAxisSize.max, children: [
-      Row(
-        children: [
-          Text(
-            "Covid Testing Sites",
-            overflow: TextOverflow.visible,
-            style: const TextStyle(
-                fontSize: 30, color: Color.fromARGB(255, 37, 74, 118)),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 20, right: 10),
-            child: Icon(
-              Icons.flight,
-              color: Color.fromARGB(255, 37, 74, 118),
-            ), // icon is 48px widget.
-          )
-        ],
-      ),
-      Row(
-        children: [
-          Expanded(
-            child: Padding(
-              padding: EdgeInsets.only(top: 10, bottom: 10),
-              child: Text(
-                "Websites for booking covid test",
-                overflow: TextOverflow.visible,
-                style: const TextStyle(
-                    fontSize: 18, color: Color.fromARGB(255, 37, 74, 118)),
+    return SingleChildScrollView(
+      child: Column(mainAxisSize: MainAxisSize.max, children: [
+        Row(
+          children: [
+            Text(
+              "Covid Testing Sites",
+              overflow: TextOverflow.visible,
+              style: const TextStyle(
+                  fontSize: 30, color: Color.fromARGB(255, 37, 74, 118)),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 20, right: 10),
+              child: Icon(
+                Icons.flight,
+                color: Color.fromARGB(255, 37, 74, 118),
+              ), // icon is 48px widget.
+            )
+          ],
+        ),
+        Row(
+          children: [
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.only(top: 10, bottom: 10),
+                child: Text(
+                  "Websites for booking covid test",
+                  overflow: TextOverflow.visible,
+                  style: const TextStyle(
+                      fontSize: 18, color: Color.fromARGB(255, 37, 74, 118)),
+                ),
               ),
             ),
-          ),
-        ],
-      ),
-      ResponsiveGridRow(
-        children: [
-          buildResponsiveCardHyperlink(
-              "4Cyte Pathology",
-              "Covid-19 Testing services",
-              "https://www.4cyte.com.au/",
-              "assets/4cyte.jpeg",
-              BoxFit.fitHeight
-          ),
-          buildResponsiveCardHyperlink(
-              "Covid testing sites",
-              "Huge range of new & used vehicles on carsguide",
-              "https://www.cesphn.org.au/coronavirus",
-              "assets/covid_testing.jpeg",
-              BoxFit.fitHeight
-          )
-        ],
-      ),
-    ]);
+          ],
+        ),
+        ResponsiveGridRow(
+          children: [
+            buildResponsiveCardHyperlink(
+                "4Cyte Pathology",
+                "Covid-19 Testing services",
+                "https://www.4cyte.com.au/",
+                "assets/4cyte.jpeg",
+                BoxFit.fitHeight
+            ),
+            buildResponsiveCardHyperlink(
+                "Covid testing sites",
+                "Huge range of new & used vehicles on carsguide",
+                "https://www.cesphn.org.au/coronavirus",
+                "assets/covid_testing.jpeg",
+                BoxFit.fitHeight
+            )
+          ],
+        ),
+      ]),
+    );
   }
 
   ResponsiveGridCol buildResponsiveCardHyperlink(String title, String body, String link, String img, BoxFit boxfit) {

@@ -7,72 +7,74 @@ class Vaccination extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(mainAxisSize: MainAxisSize.max, children: [
-      Row(
-        children: [
-          Text(
-            "Vaccination for Covid",
-            overflow: TextOverflow.visible,
-            style: const TextStyle(
-                fontSize: 30, color: Color.fromARGB(255, 37, 74, 118)),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 20, right: 10),
-            child: Icon(
-              Icons.flight,
-              color: Color.fromARGB(255, 37, 74, 118),
-            ), // icon is 48px widget.
-          )
-        ],
-      ),
-      Row(
-        children: [
-          Expanded(
-            child: Padding(
-              padding: EdgeInsets.only(top: 10, bottom: 10),
-              child: Text(
-                "Websites for Vaccination bookings and statistics",
-                overflow: TextOverflow.visible,
-                style: const TextStyle(
-                    fontSize: 18, color: Color.fromARGB(255, 37, 74, 118)),
+    return SingleChildScrollView(
+      child: Column(mainAxisSize: MainAxisSize.max, children: [
+        Row(
+          children: [
+            Text(
+              "Vaccination for Covid",
+              overflow: TextOverflow.visible,
+              style: const TextStyle(
+                  fontSize: 30, color: Color.fromARGB(255, 37, 74, 118)),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 20, right: 10),
+              child: Icon(
+                Icons.flight,
+                color: Color.fromARGB(255, 37, 74, 118),
+              ), // icon is 48px widget.
+            )
+          ],
+        ),
+        Row(
+          children: [
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.only(top: 10, bottom: 10),
+                child: Text(
+                  "Websites for Vaccination bookings and statistics",
+                  overflow: TextOverflow.visible,
+                  style: const TextStyle(
+                      fontSize: 18, color: Color.fromARGB(255, 37, 74, 118)),
+                ),
               ),
             ),
-          ),
-        ],
-      ),
-      ResponsiveGridRow(
-        children: [
-          buildResponsiveCardHyperlink(
-              "Covid Pfizer and Astrazeneca",
-              "Book an Appointment with your Practitioner",
-              "https://www.hotdoc.com.au/",
-              "assets/hotdoc.png",
-              BoxFit.fitHeight
-          ),
-          buildResponsiveCardHyperlink(
-              "Covid-19 Vaccine tracker",
-              "We have made our coronavirus vaccine tracker free for all readers.",
-              "https://www.smh.com.au/national/covid-19-global-vaccine-tracker-and-data-centre-20210128-p56xht.html",
-              "assets/vaccination.png",
-              BoxFit.fitHeight
-          ),
-          buildResponsiveCardHyperlink(
-              "Covid-19 Data",
-              "COVID-19 Vaccinations in Australia",
-              "https://www.covid19data.com.au/vaccines",
-              "assets/vaccination2.png",
-              BoxFit.fitHeight
-          ),
-          buildResponsiveCardHyperlink(
-              "Our World in Data",
-              "Australia Coronavirus Vaccination",
-              "https://ourworldindata.org/covid-vaccinations",
-              "assets/ourworldindata.png",
-              BoxFit.fitHeight
-          )
-        ],
-      ),
-    ]);
+          ],
+        ),
+        ResponsiveGridRow(
+          children: [
+            buildResponsiveCardHyperlink(
+                "Covid Pfizer and Astrazeneca",
+                "Book an Appointment with your Practitioner",
+                "https://www.hotdoc.com.au/",
+                "assets/hotdoc.png",
+                BoxFit.fitHeight
+            ),
+            buildResponsiveCardHyperlink(
+                "Covid-19 Vaccine tracker",
+                "We have made our coronavirus vaccine tracker free for all readers.",
+                "https://www.smh.com.au/national/covid-19-global-vaccine-tracker-and-data-centre-20210128-p56xht.html",
+                "assets/vaccination.png",
+                BoxFit.fitHeight
+            ),
+            buildResponsiveCardHyperlink(
+                "Covid-19 Data",
+                "COVID-19 Vaccinations in Australia",
+                "https://www.covid19data.com.au/vaccines",
+                "assets/vaccination2.png",
+                BoxFit.fitHeight
+            ),
+            buildResponsiveCardHyperlink(
+                "Our World in Data",
+                "Australia Coronavirus Vaccination",
+                "https://ourworldindata.org/covid-vaccinations",
+                "assets/ourworldindata.png",
+                BoxFit.fitHeight
+            )
+          ],
+        ),
+      ]),
+    );
   }
 
   ResponsiveGridCol buildResponsiveCardHyperlink(String title, String body, String link, String img, BoxFit boxfit) {

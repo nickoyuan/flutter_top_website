@@ -7,32 +7,34 @@ class GridNews extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(mainAxisSize: MainAxisSize.max, children: [
-      ResponsiveGridRow(
-        children: [
-          buildResponsiveCardHyperlink(
-              "News",
-              "https://www.webjet.com.au/",
-              "assets/plane.png",
-              BoxFit.contain),
-          buildResponsiveCardHyperlink(
-              "Videos",
-              "https://www.flightcentre.com.au/",
-              "assets/flightcentre.png",
-              BoxFit.fitWidth),
-          buildResponsiveCardHyperlink(
-              "Games",
-              "https://www.qantas.com/",
-              "assets/qantas.png",
-              BoxFit.fitHeight),
-          buildResponsiveCardHyperlink(
-              "Tour",
-              "https://www.jetstar.com/",
-              "assets/jetstar.png",
-              BoxFit.fitHeight),
-        ],
-      ),
-    ]);
+    return SingleChildScrollView(
+      child: Column(mainAxisSize: MainAxisSize.max, children: [
+        ResponsiveGridRow(
+          children: [
+            buildResponsiveCardHyperlink(
+                "News",
+                "https://www.webjet.com.au/",
+                "assets/plane.png",
+                BoxFit.contain),
+            buildResponsiveCardHyperlink(
+                "Videos",
+                "https://www.flightcentre.com.au/",
+                "assets/flightcentre.png",
+                BoxFit.fitWidth),
+            buildResponsiveCardHyperlink(
+                "Games",
+                "https://www.qantas.com/",
+                "assets/qantas.png",
+                BoxFit.fitHeight),
+            buildResponsiveCardHyperlink(
+                "Tour",
+                "https://www.jetstar.com/",
+                "assets/jetstar.png",
+                BoxFit.fitHeight),
+          ],
+        ),
+      ]),
+    );
   }
 
   ResponsiveGridCol buildResponsiveCardHyperlink(

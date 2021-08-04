@@ -7,72 +7,74 @@ class Music extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(mainAxisSize: MainAxisSize.max, children: [
-      Row(
-        children: [
-          Text(
-            "Music",
-            overflow: TextOverflow.visible,
-            style: const TextStyle(
-                fontSize: 30, color: Color.fromARGB(255, 37, 74, 118)),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 20, right: 10),
-            child: Icon(
-              Icons.flight,
-              color: Color.fromARGB(255, 37, 74, 118),
-            ), // icon is 48px widget.
-          )
-        ],
-      ),
-      Row(
-        children: [
-          Expanded(
-            child: Padding(
-              padding: EdgeInsets.only(top: 10, bottom: 10),
-              child: Text(
-                "Websites for listening to music",
-                overflow: TextOverflow.visible,
-                style: const TextStyle(
-                    fontSize: 18, color: Color.fromARGB(255, 37, 74, 118)),
+    return SingleChildScrollView(
+      child: Column(mainAxisSize: MainAxisSize.max, children: [
+        Row(
+          children: [
+            Text(
+              "Music",
+              overflow: TextOverflow.visible,
+              style: const TextStyle(
+                  fontSize: 30, color: Color.fromARGB(255, 37, 74, 118)),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 20, right: 10),
+              child: Icon(
+                Icons.flight,
+                color: Color.fromARGB(255, 37, 74, 118),
+              ), // icon is 48px widget.
+            )
+          ],
+        ),
+        Row(
+          children: [
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.only(top: 10, bottom: 10),
+                child: Text(
+                  "Websites for listening to music",
+                  overflow: TextOverflow.visible,
+                  style: const TextStyle(
+                      fontSize: 18, color: Color.fromARGB(255, 37, 74, 118)),
+                ),
               ),
             ),
-          ),
-        ],
-      ),
-      ResponsiveGridRow(
-        children: [
-          buildResponsiveCardHyperlink(
-              "Spotify",
-              "Listening is everything. Millions of songs and podcasts.",
-              "https://www.spotify.com/au/",
-              "assets/spotify.png",
-              BoxFit.fitHeight
-          ),
-          buildResponsiveCardHyperlink(
-              "Youtube Music",
-              "Read manga online free at MangaNato",
-              "https://music.youtube.com/tasteprofile",
-              "assets/youtubemusic.jpeg",
-              BoxFit.fitHeight
-          ),
-          buildResponsiveCardHyperlink(
-              "Tidal",
-              "TIDAL is the first global music streaming service with high fidelity sound",
-              "https://tidal.com/",
-              "assets/tidal.png",
-              BoxFit.fitHeight
-          ),
-          buildResponsiveCardHyperlink(
-              "Deezer",
-              "You bring the passion, we bring the music! Access more than 73 million tracks",
-              "https://www.deezer.com/en/",
-              "assets/deezer.jpeg",
-              BoxFit.fitHeight
-          )
-        ],
-      ),
-    ]);
+          ],
+        ),
+        ResponsiveGridRow(
+          children: [
+            buildResponsiveCardHyperlink(
+                "Spotify",
+                "Listening is everything. Millions of songs and podcasts.",
+                "https://www.spotify.com/au/",
+                "assets/spotify.png",
+                BoxFit.fitHeight
+            ),
+            buildResponsiveCardHyperlink(
+                "Youtube Music",
+                "Read manga online free at MangaNato",
+                "https://music.youtube.com/tasteprofile",
+                "assets/youtubemusic.jpeg",
+                BoxFit.fitHeight
+            ),
+            buildResponsiveCardHyperlink(
+                "Tidal",
+                "TIDAL is the first global music streaming service with high fidelity sound",
+                "https://tidal.com/",
+                "assets/tidal.png",
+                BoxFit.fitHeight
+            ),
+            buildResponsiveCardHyperlink(
+                "Deezer",
+                "You bring the passion, we bring the music! Access more than 73 million tracks",
+                "https://www.deezer.com/en/",
+                "assets/deezer.jpeg",
+                BoxFit.fitHeight
+            )
+          ],
+        ),
+      ]),
+    );
   }
 
   ResponsiveGridCol buildResponsiveCardHyperlink(String title, String body, String link, String img, BoxFit boxfit) {

@@ -7,72 +7,74 @@ class Flights extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(mainAxisSize: MainAxisSize.max, children: [
-      Row(
-        children: [
-          Text(
-            "Flights Favourites",
-            overflow: TextOverflow.visible,
-            style: const TextStyle(
-                fontSize: 30, color: Color.fromARGB(255, 37, 74, 118)),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 20, right: 10),
-            child: Icon(
-              Icons.flight,
-              color: Color.fromARGB(255, 37, 74, 118),
-            ), // icon is 48px widget.
-          )
-        ],
-      ),
-      Row(
-        children: [
-          Expanded(
-            child: Padding(
-              padding: EdgeInsets.only(top: 10, bottom: 10),
-              child: Text(
-                "Favourite flight booking websites to book domestic and international flights",
-                overflow: TextOverflow.visible,
-                style: const TextStyle(
-                    fontSize: 18, color: Color.fromARGB(255, 37, 74, 118)),
+    return SingleChildScrollView(
+      child: Column(mainAxisSize: MainAxisSize.max, children: [
+        Row(
+          children: [
+            Text(
+              "Flights Favourites",
+              overflow: TextOverflow.visible,
+              style: const TextStyle(
+                  fontSize: 30, color: Color.fromARGB(255, 37, 74, 118)),
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: 20, right: 10),
+              child: Icon(
+                Icons.flight,
+                color: Color.fromARGB(255, 37, 74, 118),
+              ), // icon is 48px widget.
+            )
+          ],
+        ),
+        Row(
+          children: [
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.only(top: 10, bottom: 10),
+                child: Text(
+                  "Favourite flight booking websites to book domestic and international flights",
+                  overflow: TextOverflow.visible,
+                  style: const TextStyle(
+                      fontSize: 18, color: Color.fromARGB(255, 37, 74, 118)),
+                ),
               ),
             ),
-          ),
-        ],
-      ),
-      ResponsiveGridRow(
-        children: [
-          buildResponsiveCardHyperlink(
-              "Webjet",
-              "Webjet an online travel agency in Australia and New Zealand",
-              "https://www.webjet.com.au/",
-              "assets/webjet.png",
-              BoxFit.fitWidth
-          ),
-          buildResponsiveCardHyperlink(
-              "Flight Centre",
-              "Flight Centre Australia is Australia's largest retailer of travel",
-              "https://www.flightcentre.com.au/",
-              "assets/flightcentre.png",
-              BoxFit.fitWidth
-          ),
-          buildResponsiveCardHyperlink(
-              "Qantas",
-              "Qantas Airways is the largest airline in Australia with international and domestic flights",
-              "https://www.qantas.com/",
-              "assets/qantas.png",
-              BoxFit.fitHeight
-          ),
-          buildResponsiveCardHyperlink(
-              "Jetstar",
-              "Jetstar Airways Pty Ltd, operating as Jetstar, is an Australian low-cost airline headquartered in Melbourne",
-              "https://www.jetstar.com/",
-              "assets/jetstar.png",
-              BoxFit.fitHeight
-          ),
-        ],
-      ),
-    ]);
+          ],
+        ),
+        ResponsiveGridRow(
+          children: [
+            buildResponsiveCardHyperlink(
+                "Webjet",
+                "Webjet an online travel agency in Australia and New Zealand",
+                "https://www.webjet.com.au/",
+                "assets/webjet.png",
+                BoxFit.fitWidth
+            ),
+            buildResponsiveCardHyperlink(
+                "Flight Centre",
+                "Flight Centre Australia is Australia's largest retailer of travel",
+                "https://www.flightcentre.com.au/",
+                "assets/flightcentre.png",
+                BoxFit.fitWidth
+            ),
+            buildResponsiveCardHyperlink(
+                "Qantas",
+                "Qantas Airways is the largest airline in Australia with international and domestic flights",
+                "https://www.qantas.com/",
+                "assets/qantas.png",
+                BoxFit.fitHeight
+            ),
+            buildResponsiveCardHyperlink(
+                "Jetstar",
+                "Jetstar Airways Pty Ltd, operating as Jetstar, is an Australian low-cost airline headquartered in Melbourne",
+                "https://www.jetstar.com/",
+                "assets/jetstar.png",
+                BoxFit.fitHeight
+            ),
+          ],
+        ),
+      ]),
+    );
   }
 
   ResponsiveGridCol buildResponsiveCardHyperlink(String title, String body, String link, String img, BoxFit boxfit) {
