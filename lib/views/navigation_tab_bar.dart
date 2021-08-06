@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_grid/responsive_grid.dart';
 import 'package:searchlog/views/tab_bar/content_view.dart';
 import 'package:searchlog/views/tab_bar/custom_tab.dart';
 import 'package:searchlog/views/tab_bar/custom_tab_bar.dart';
@@ -74,18 +75,16 @@ with SingleTickerProviderStateMixin{
             ),
           )
         ],),
-        Container(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Container(
-                height: screenHeight * 0.05,
-                child: CustomTabBar(
-                    controller: tabController,
-                    tabs: contentViews.map((e) => e.tab).toList()),
-              ),
-            ],
-          ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Container(
+              height: screenHeight * 0.05,
+              child: CustomTabBar(
+                  controller: tabController,
+                  tabs: contentViews.map((e) => e.tab).toList()),
+            ),
+          ],
         ),
       ],
     );

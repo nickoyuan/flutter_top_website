@@ -1,3 +1,4 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_grid/responsive_grid.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -35,6 +36,7 @@ class GridLayout extends StatelessWidget {
           clipBehavior: Clip.antiAlias,
           child: InkWell(
             onTap: () {
+              FirebaseAnalytics().logEvent(name: title,parameters:null);
               urlHandler.launchURL(link);
             },
             child: Column(

@@ -1,3 +1,4 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_grid/responsive_grid.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -20,7 +21,7 @@ class Shopping extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(left: 20, right: 10),
               child: Icon(
-                Icons.shopping_bag,
+                Icons.shopping_bag ,
                 color: Color.fromARGB(255, 37, 74, 118),
               ), // icon is 48px widget.
             )
@@ -88,6 +89,7 @@ class Shopping extends StatelessWidget {
           clipBehavior: Clip.antiAlias,
           child: InkWell(
             onTap: () {
+              FirebaseAnalytics().logEvent(name: title,parameters:null);
               urlHandler.launchURL(link);
             },
             child: ListTile(
