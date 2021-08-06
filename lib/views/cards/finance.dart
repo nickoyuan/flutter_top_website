@@ -20,7 +20,7 @@ class Finance extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(left: 20, right: 10),
               child: Icon(
-                Icons.flight,
+                Icons.monetization_on,
                 color: Color.fromARGB(255, 37, 74, 118),
               ), // icon is 48px widget.
             )

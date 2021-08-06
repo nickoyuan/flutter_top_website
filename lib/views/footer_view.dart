@@ -32,7 +32,7 @@ class _FooterViewState extends State<FooterView> {
                     padding: EdgeInsets.only(left: 20, right: 10),
                     child: Icon(
                       Icons.people,
-                      color: Color.fromARGB(255, 37, 74, 118),
+                      color: Colors.white,
                     ), // icon is 48px widget.
                   )
                 ],
@@ -41,7 +41,7 @@ class _FooterViewState extends State<FooterView> {
                 height: 10,
               ),
               Text(
-                "Want to help top websites out? Give us a share and give others the gift of easy selection without needing to type.",
+                "Share to those poor souls without a keyboard",
                 overflow: TextOverflow.visible,
                 style: const TextStyle(
                     fontSize: 20, color: Colors.white),

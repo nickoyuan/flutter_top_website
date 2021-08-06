@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_grid/responsive_grid.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class CovidTest extends StatelessWidget {
+class Funny extends StatelessWidget {
   UrlHandler urlHandler = UrlHandler();
 
   @override
@@ -12,7 +12,7 @@ class CovidTest extends StatelessWidget {
         Row(
           children: [
             Text(
-              "Covid Testing Sites",
+              "Funny videos",
               overflow: TextOverflow.visible,
               style: const TextStyle(
                   fontSize: 30, color: Color.fromARGB(255, 37, 74, 118)),
@@ -20,7 +20,7 @@ class CovidTest extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(left: 20, right: 10),
               child: Icon(
-                Icons.coronavirus,
+                Icons.gamepad,
                 color: Color.fromARGB(255, 37, 74, 118),
               ), // icon is 48px widget.
             )
@@ -32,7 +32,7 @@ class CovidTest extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.only(top: 10, bottom: 10),
                 child: Text(
-                  "Websites for booking covid test",
+                  "Funny and random videos or pictures to browse",
                   overflow: TextOverflow.visible,
                   style: const TextStyle(
                       fontSize: 18, color: Color.fromARGB(255, 37, 74, 118)),
@@ -44,17 +44,31 @@ class CovidTest extends StatelessWidget {
         ResponsiveGridRow(
           children: [
             buildResponsiveCardHyperlink(
-                "4Cyte Pathology",
-                "Covid-19 Testing services",
-                "https://www.4cyte.com.au/",
-                "assets/4cyte.jpeg",
+                "9GAG",
+                "9GAG is your best source of FUN! Explore 9GAG for the most popular memes, breaking stories",
+                "https://9gag.com/",
+                "assets/9gag.png",
                 BoxFit.fitHeight
             ),
             buildResponsiveCardHyperlink(
-                "Covid testing sites",
-                "Huge range of new & used vehicles on carsguide",
-                "https://www.cesphn.org.au/coronavirus",
-                "assets/covid_testing.jpeg",
+                "Reddit",
+                "Welcome to r/Funny, Reddit's largest humour depository.",
+                "https://www.reddit.com/r/funny/",
+                "assets/reddit.jpeg",
+                BoxFit.fitHeight
+            ),
+            buildResponsiveCardHyperlink(
+                "Meme Center",
+                "A Place for Pure Laughter. 100% Funny - 100% Original.",
+                "https://www.memecenter.com/",
+                "assets/meme_center.png",
+                BoxFit.fitHeight
+            ),
+            buildResponsiveCardHyperlink(
+                "iFunny",
+                "IFunny is fun of your life. Images, GIFs and videos featured seven times a day.",
+                "https://ifunny.co/",
+                "assets/ifunny.jpeg",
                 BoxFit.fitHeight
             )
           ],

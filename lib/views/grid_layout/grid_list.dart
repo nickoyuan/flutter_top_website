@@ -13,7 +13,9 @@ const List<GridList> choices = const <GridList>[
   const GridList(title: 'Vaccination', img: "assets/front_page/vaccine.jpg"),
   const GridList(title: 'Covid Testing Sites', img: "assets/front_page/covid_test.jpg"),
   const GridList(title: 'News', img: "assets/front_page/news_front.jpg"),
+  const GridList(title: 'Job Search', img: "assets/front_page/job.jpg"),
   const GridList(title: 'Game', img: "assets/front_page/game.jpg"),
+  const GridList(title: 'Funny', img: "assets/front_page/funny.jpg"),
   const GridList(title: 'Shopping', img: "assets/front_page/shopping.jpg"),
   const GridList(title: 'Manga', img: "assets/front_page/anime.jpg"),
   const GridList(title: 'Travel', img: "assets/front_page/travel.jpg"),
@@ -29,7 +31,7 @@ const List<GridList> choices = const <GridList>[
 
 /*
  const GridList(title: 'Gambling', img: "assets/front_page/gambling.jpg"),
-  const GridList(title: 'Job Search', img: "assets/front_page/job.jpg"),
+
   const GridList(title: 'Sports', img: "assets/front_page/sport.jpg"),
   const GridList(title: 'Social', img: "assets/front_page/social.jpg"),
  */

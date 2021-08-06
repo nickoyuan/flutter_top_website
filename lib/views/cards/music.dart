@@ -20,7 +20,7 @@ class Music extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(left: 20, right: 10),
               child: Icon(
-                Icons.flight,
+                Icons.music_note,
                 color: Color.fromARGB(255, 37, 74, 118),
               ), // icon is 48px widget.
             )
@@ -52,7 +52,7 @@ class Music extends StatelessWidget {
             ),
             buildResponsiveCardHyperlink(
                 "Youtube Music",
-                "Read manga online free at MangaNato",
+                "A new music service with official albums, singles, videos, remixes, live performances",
                 "https://music.youtube.com/tasteprofile",
                 "assets/youtubemusic.jpeg",
                 BoxFit.fitHeight

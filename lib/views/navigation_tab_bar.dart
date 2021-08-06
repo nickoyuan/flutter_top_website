@@ -45,15 +45,27 @@ with SingleTickerProviderStateMixin{
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Column(children: [
-          Text(
-            "Top Websites",
-            overflow: TextOverflow.visible,
-            style: const TextStyle(
-                fontSize: 25, color: Colors.white
-            ),
+          Row(
+            children: [
+              Text(
+                "For those too lazy to type",
+                overflow: TextOverflow.visible,
+                style: const TextStyle(
+                    fontSize: 25, color: Colors.white
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: 20, right: 10),
+                child: Icon(
+                  Icons.keyboard,
+                  size: 40,
+                  color: Colors.white,
+                ), // icon is 48px widget.
+              ),
+            ],
           ),
           Text(
-            "Click and Find",
+            "Quick Find",
             overflow: TextOverflow.visible,
             style: const TextStyle(
                 fontFamily: "Satisfy",

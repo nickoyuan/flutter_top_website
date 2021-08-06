@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_grid/responsive_grid.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class CovidTest extends StatelessWidget {
+class JobSearch extends StatelessWidget {
   UrlHandler urlHandler = UrlHandler();
 
   @override
@@ -12,7 +12,7 @@ class CovidTest extends StatelessWidget {
         Row(
           children: [
             Text(
-              "Covid Testing Sites",
+              "Job Search",
               overflow: TextOverflow.visible,
               style: const TextStyle(
                   fontSize: 30, color: Color.fromARGB(255, 37, 74, 118)),
@@ -20,7 +20,7 @@ class CovidTest extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(left: 20, right: 10),
               child: Icon(
-                Icons.coronavirus,
+                Icons.book,
                 color: Color.fromARGB(255, 37, 74, 118),
               ), // icon is 48px widget.
             )
@@ -32,7 +32,7 @@ class CovidTest extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.only(top: 10, bottom: 10),
                 child: Text(
-                  "Websites for booking covid test",
+                  "Websites for best job searches in Australia",
                   overflow: TextOverflow.visible,
                   style: const TextStyle(
                       fontSize: 18, color: Color.fromARGB(255, 37, 74, 118)),
@@ -44,17 +44,31 @@ class CovidTest extends StatelessWidget {
         ResponsiveGridRow(
           children: [
             buildResponsiveCardHyperlink(
-                "4Cyte Pathology",
-                "Covid-19 Testing services",
-                "https://www.4cyte.com.au/",
-                "assets/4cyte.jpeg",
+                "Seek",
+                "SEEK is Australia's number one employment marketplace. Find jobs and career related information or recruit the ideal candidate. ",
+                "https://www.seek.com.au/",
+                "assets/seek.png",
                 BoxFit.fitHeight
             ),
             buildResponsiveCardHyperlink(
-                "Covid testing sites",
-                "Huge range of new & used vehicles on carsguide",
-                "https://www.cesphn.org.au/coronavirus",
-                "assets/covid_testing.jpeg",
+                "LinkedIn",
+                "LinkedIn is an American business and employment-oriented online service that operates via websites and mobile apps",
+                "https://au.linkedin.com/jobs",
+                "assets/linkedin.jpeg",
+                BoxFit.fitHeight
+            ),
+            buildResponsiveCardHyperlink(
+                "Jora",
+                "Browse jobs with Jora. More than 250000 jobs, all on one job search site. ",
+                "https://au.jora.com//",
+                "assets/jora.png",
+                BoxFit.fitHeight
+            ),
+            buildResponsiveCardHyperlink(
+                "Indeed",
+                "With Indeed, you can search millions of jobs online to find the next step in your career. ",
+                "https://au.indeed.com/",
+                "assets/indeed.jpeg",
                 BoxFit.fitHeight
             )
           ],

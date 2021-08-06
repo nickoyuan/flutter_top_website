@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:searchlog/views/centered_view.dart';
 import 'package:searchlog/views/grid_layout/grid_layout.dart';
+import 'footer_view.dart';
 import 'navigation_tab_bar.dart';
 
 class HomeView extends StatelessWidget {
@@ -16,7 +17,7 @@ class HomeView extends StatelessWidget {
             CenteredView(child: NavigationTabBarView()),
             CenteredView(child: GridLayout()),
             SizedBox(height: 100,),
-            //FooterView()
+            FooterView()
           ],
         )));
   }

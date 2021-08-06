@@ -9,7 +9,9 @@ import 'cards/covid.dart';
 import 'cards/covid_test.dart';
 import 'cards/finance.dart';
 import 'cards/flights.dart';
+import 'cards/funny.dart';
 import 'cards/game.dart';
+import 'cards/job_search.dart';
 import 'cards/manga.dart';
 import 'cards/music.dart';
 import 'cards/news.dart';
@@ -65,6 +67,10 @@ class DetailsPage extends StatelessWidget {
         return Music();
       case "Finance":
         return Finance();
+      case "Job Search":
+        return JobSearch();
+      case "Funny":
+        return Funny();
     }
   }
 }
