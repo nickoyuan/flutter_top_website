@@ -32,7 +32,7 @@ class _AppState extends State<App> {
         // Once complete, show your application
         if (snapshot.connectionState == ConnectionState.done) {
           return MaterialApp(
-            title: 'Flutter Demo',
+            title: 'Quick Search',
             theme: ThemeData(
                 primarySwatch: Colors.blue,
                 textTheme: Theme.of(context).textTheme.apply(
