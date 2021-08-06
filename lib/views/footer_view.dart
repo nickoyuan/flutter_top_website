@@ -42,6 +42,7 @@ class _FooterViewState extends State<FooterView> {
               ),
               Text(
                 "Share to those poor souls without a keyboard",
+                textAlign: TextAlign.center,
                 overflow: TextOverflow.visible,
                 style: const TextStyle(
                     fontSize: 20, color: Colors.white),
