@@ -50,6 +50,7 @@ flutter:
   assets:
     - assets/
     - assets/front_page/
+    - assets/fonts/
   fonts:
     - family: Open Sans
       fonts:
@@ -57,9 +58,15 @@ flutter:
           weight: 800
         - asset: assets/fonts/OpenSans-Regular.ttf
           weight: 400
+    - family: Merriweather
+      fonts:
         - asset: assets/fonts/Merriweather-Regular.ttf
         - asset: assets/fonts/Merriweather-Light.ttf
         - asset: assets/fonts/Merriweather-Bold.ttf
+    - family: Satisfy
+      fonts:
+        - asset: assets/fonts/Satisfy-Regular.ttf
+
   # To add assets to your application, add an assets section, like this:
 
 
