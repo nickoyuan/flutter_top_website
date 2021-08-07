@@ -40,9 +40,10 @@ with SingleTickerProviderStateMixin{
 
   @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.of(context).size.width;
+    bool isScreenWide = MediaQuery.of(context).size.width >= 800;
     double  screenHeight = MediaQuery.of(context).size.height;
-    return Row(
+    return Flex(
+      direction: isScreenWide ? Axis.horizontal : Axis.vertical,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Column(children: [
@@ -75,16 +76,11 @@ with SingleTickerProviderStateMixin{
             ),
           )
         ],),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            Container(
-              height: screenHeight * 0.05,
-              child: CustomTabBar(
-                  controller: tabController,
-                  tabs: contentViews.map((e) => e.tab).toList()),
-            ),
-          ],
+        Container(
+          height: screenHeight * 0.05,
+          child: CustomTabBar(
+              controller: tabController,
+              tabs: contentViews.map((e) => e.tab).toList()),
         ),
       ],
     );
